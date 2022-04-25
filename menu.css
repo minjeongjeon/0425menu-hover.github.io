@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.mainmenu {
+    background-color: #333;
+    /* padding-left: 40px; */
+}
+ul {
+    list-style: none;
+}
+li {
+    color: #fff;
+}
+
+.clear::after {
+    content: '';
+    display: block;
+    clear:both;
+}
+.mainmenu > li {
+    float: left;   
+    margin-left: 50px;
+    list-style: none;
+    line-height:35px;
+    position: relative;   
+}
+
+
+.mainmenu > li > ul {
+    /* display: none; */
+    opacity: 0;
+    top: 100% ;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 0, 0);
+    transition: all 0.7s;
+    /* z-index: -1; */
+}
+.mainmenu > li:hover ul {
+    display: block;
+    opacity: 1;
+    top: 35px;
+}
+.mainmenu li ul li {
+    padding: 0 10px;
+    white-space: nowrap;
+}               
+/* 마우스를 올리면 서브메뉴를 display를 이용하여 나타나도록 합니다. */
